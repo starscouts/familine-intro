@@ -1,0 +1,474 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2022- Minteck
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ */
+
+@font-face {
+    src: url("/webfonts/Lato-Black.ttf");
+    font-family: "Lato";
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-BlackItalic.ttf");
+    font-family: "Lato";
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-Bold.ttf");
+    font-family: "Lato";
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-BoldItalic.ttf");
+    font-family: "Lato";
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-Light.ttf");
+    font-family: "Lato";
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-LightItalic.ttf");
+    font-family: "Lato";
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-Thin.ttf");
+    font-family: "Lato";
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-ThinItalic.ttf");
+    font-family: "Lato";
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-Regular.ttf");
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("/webfonts/Lato-Italic.ttf");
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: italic;
+}
+
+html, body {
+    margin: 0;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}
+
+#main-nav {
+    font-size: 14px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: calc(100% - 30px);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1140px;
+    }
+}
+
+#nav-logo-img {
+    width: 32px;
+    height: 32px;
+}
+
+#nav-logo {
+    display: inline-block;
+}
+
+header {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: linear-gradient(180deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 100%);
+    transition: background 200ms;
+}
+
+header * {
+    vertical-align: middle;
+}
+
+.nav-link {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: rgba(0, 0, 0, .5);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-link:active {
+    color: black;
+}
+
+#nav-links {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.nav-link {
+    display: inline-block;
+}
+
+#nav-aside {
+    float: right;
+    margin-top: 5px;
+    border-radius: 9999px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .5);
+    text-decoration: none;
+    height: 21px;
+}
+
+#nav-aside:hover {
+    border: 1px solid rgba(0, 0, 0, .75);
+    color: rgba(0, 0, 0, .75);
+}
+
+#nav-aside:active {
+    border: 1px solid rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+#loggedin-profile {
+    border-radius: 999px;
+    width: 16px;
+    vertical-align: middle;
+}
+
+#loggedin-name {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#loggedin-action {
+    display: inline-block;
+}
+
+main {
+    height: 100%;
+}
+
+#hero {
+    height: 100vh;
+    background-image: url("/intro.svg");
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+}
+
+#hero-content {
+    height: calc(100vh - 52px);
+    padding-top: 52px;
+    margin-top: -100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#hero-content * {
+    text-align: center;
+}
+
+#hero-content #hero-title-part-big {
+    margin: 5px;
+    font-weight: normal;
+    font-size: 96px;
+}
+
+#hero-content #hero-title-part-small {
+    margin: 5px;
+    font-weight: normal;
+    font-size: 42px;
+}
+
+#hero-stylized {
+    font-weight: bold;
+    background: linear-gradient(145deg, rgba(93,33,33,1) 0%, rgba(90,93,33,1) 20%, rgba(33,93,41,1) 40%, rgba(33,91,93,1) 60%, rgba(35,33,93,1) 80%, rgba(93,33,86,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header.scrolled, header.scrolled-force {
+    background: black;
+}
+
+header.scrolled #nav-aside, header.scrolled-force #nav-aside {
+    border: 1px solid rgba(255, 255, 255, .75);
+    color: rgba(255, 255, 255, .75);
+}
+
+header.scrolled #nav-aside:hover, header.scrolled-force #nav-aside:hover {
+    border: 1px solid rgba(255, 255, 255, .85);
+    color: rgba(255, 255, 255, .85);
+}
+
+header.scrolled #nav-aside:active, header.scrolled-force #nav-aside:active {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+#nav-aside, #nav-link {
+    transition: border 200ms, color 200ms;
+}
+
+header.scrolled .nav-link, header.scrolled-force .nav-link {
+    color: rgba(255, 255, 255, .75);
+}
+
+header.scrolled .nav-link:active, header.scrolled-force .nav-link:active {
+    color: white;
+}
+
+.button {
+    margin-top: 10px;
+    display: inline-block;
+    background: black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 7px 15px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    transition: box-shadow 200ms;
+}
+
+.button:hover {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.button:active {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.75);
+}
+
+.button:nth-last-child(1) {
+    margin-left: 10px;
+}
+
+:nth-child(3).button {
+    margin-left: 0 !important;
+}
+
+.button-secondary {
+    background: #333;
+}
+
+.button-main {
+    color: black;
+    background: #ddd;
+}
+
+.h5, h5 {
+    font-size: 24px;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+.container p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ .welcome-box-container {
+     display: grid;
+     grid-template-columns: 50% 50%;
+ }
+
+.welcome-box-container .welcome-box-container--inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.welcome-box-container .welcome-box-container--inner > div {
+    width: 100%;
+}
+
+.welcome-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.welcome-box-app {
+    text-align: center;
+    padding: 10px;
+}
+
+.screenshot {
+    border-radius: 5px;
+    box-shadow: 5px 8px 11px 2px rgba(0, 0, 0, 30%);
+}
+
+.welcome-box-0 {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+.welcome-box-1 {
+    background-color: rgba(0, 0, 0, .17);
+}
+
+.welcome-box-2 {
+    background-color: rgba(0, 0, 0, .09);
+}
+
+.welcome-box-3 {
+    background-color: rgba(236, 88, 58, 25%);
+}
+
+.welcome-box-4 {
+    background-color: rgba(234, 111, 58, 25%);
+}
+
+.welcome-box-5 {
+    background-color: rgba(236, 206, 59, 25%);
+}
+
+.welcome-box-6 {
+    background-color: rgba(59, 239, 59, 25%);
+}
+
+.welcome-box-7 {
+    background-color: rgba(58, 233, 109, 25%);
+}
+
+.welcome-box-8 {
+    background-color: rgba(53, 183, 255, 25%);
+}
+
+.welcome-box-9 {
+    background-color: rgba(149, 59, 239, 25%);
+}
+
+.welcome-box-10 {
+    background-color: rgba(237, 59, 211, 25%);
+}
+
+@media (max-width: 700px) {
+    .welcome-box-container {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+#skip-header {
+    margin-top: 52px;
+}
+
+@media (max-width: 700px) {
+    #hero-content #hero-title-part-big {
+        font-size: 48px;
+    }
+    #hero-content #hero-title-part-small {
+        font-size: 28px;
+    }
+    .nav-link {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    #nav-aside {
+        float: initial;
+        display: block;
+        margin-left: auto;
+        max-width: fit-content;
+        margin-top: 5px;
+    }
+    header {
+        height: 100px;
+    }
+    #hero-content {
+        height: calc(100vh - 120px);
+        padding-top: 120px;
+    }
+    #skip-header {
+        margin-top: 120px;
+    }
+    #nav-links {
+        width: calc(100% - 32px);
+        padding-left: 0;
+    }
+}
